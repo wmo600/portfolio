@@ -1,11 +1,5 @@
-const Layout = ({ children }) => {
-  return (
-    <div className="layout-wrapper">
-      <div className="layout-container">
-        {children}
-      </div>
-    </div>
-  );
-};
+const Layout = ({ children }) => (
+  <div className="layout">{children}</div>
+);
 
 export default Layout;
