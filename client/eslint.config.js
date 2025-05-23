@@ -8,12 +8,16 @@ export default [
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: globals.browser,
+      parser: '@babel/eslint-parser',
       parserOptions: {
-        ecmaVersion: 'latest',
+        requireConfigFile: false,
         ecmaFeatures: { jsx: true },
-        sourceType: 'module',
+        babelOptions: {
+          presets: ['@babel/preset-react'],
+        },
       },
     },
     plugins: {
@@ -23,11 +27,11 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[_a-zA-Z]' }],
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
     },
   },
-]
+];

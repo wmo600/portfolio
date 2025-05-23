@@ -2,50 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global Defaults */
-body {
-  @apply bg-black text-green-400 font-mono;
-}
-
-/* Layout Wrapper Styles */
-.layout-wrapper {
-  min-height: 100vh;
-  padding: 1.5rem;
-  background-color: black;
-  color: #22c55e; /* Tailwind green-400 */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
   font-family: monospace;
+  color: #d4d4d4;
 }
 
-.layout-container {
-  max-width: 768px;
-  margin-left: auto;
-  margin-right: auto;
+.layout {
+  display: flex;
+  height: 100vh;
 }
 
-/* Reusable Terminal-Themed Classes */
-.terminal-title {
-  font-size: 1.125rem; /* Tailwind text-lg */
-  font-weight: 600;
-  color: #86efac; /* Tailwind green-300 */
+.sidebar {
+  width: 200px;
+  background-color: #252526;
+  padding: 1rem;
+  border-right: 1px solid #333;
 }
 
-.terminal-section {
-  border-left: 2px solid #22c55e;
-  padding-left: 1rem;
-  margin-bottom: 1.5rem;
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.terminal-command {
-  font-weight: 600;
-  color: #86efac;
+.tabs {
+  display: flex;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
 }
 
-.terminal-link {
-  text-decoration: underline;
-  color: #86efac;
-  transition: color 0.2s ease-in-out;
+.tabs span {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #bbb;
 }
 
-.terminal-link:hover {
-  color: #bbf7d0; /* Tailwind green-200 */
+.tabs .active {
+  color: #4fc1ff;
+  border-bottom: 2px solid #4fc1ff;
+}
+
+.code-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.typewriter {
+  color: #86efac; /* Tailwind's green-300 */
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
 }

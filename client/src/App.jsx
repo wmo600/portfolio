@@ -1,16 +1,13 @@
-import Layout from "./components/Layout";
-import TerminalIntro from "./components/TerminalIntro";
-import ProjectList from "./components/ProjectList";
-import ContactInfo from "./components/ContactInfo";
+import { BrowserRouter as Router } from 'react-router-dom';
+import VSCodeShell from './components/VSCodeShell';
+import AppRouter from './router/AppRouter';
 
-function App() {
-  return (
-    <Layout>
-      <TerminalIntro />
-      <ProjectList />
-      <ContactInfo />
-    </Layout>
-  );
-}
+const App = () => (
+  <Router>
+    <VSCodeShell>
+      <AppRouter />
+    </VSCodeShell>
+  </Router>
+);
 
 export default App;
