@@ -1,14 +1,42 @@
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import jsxIcon from "../assets/icons/jsx-icon.svg";
+import { useTheme } from "../contexts/ThemeContext";
+import { useTabs } from "../contexts/TabsContext";
 
-const Sidebar = () => (
-  <aside className="sidebar">
-    <h2>EXPLORER</h2>
-    <ul>
-      <li><Link to="/">Home.jsx</Link></li>
-      <li><Link to="/projects">Projects.jsx</Link></li>
-      <li><Link to="/contact">Contact.jsx</Link></li>
-    </ul>
-  </aside>
-);
+const Sidebar = () => {
+  const [open, setOpen] = useState(true);
+  const { toggleTheme } = useTheme();
+  const { openTab } = useTabs();
+
+  const files = [
+    { name: "Projects.jsx", path: "/projects" },
+    { name: "Contact.jsx", path: "/contact" },
+  ];
+
+  return (
+    <aside className="sidebar">
+      <div>
+        <h2 className="sidebar-title">EXPLORER</h2>
+        <div className="folder">
+          <div className="folder-label" onClick={() => setOpen(!open)}>
+            {open ? "▼" : "▶"} portfolio
+          </div>
+          {open && (
+            <ul className="file-list">
+              {files.map(({ name, path }) => (
+                <li key={path} className="file-item" onClick={() => openTab(path)}>
+                  <div className="file-link">
+                    <img src={jsxIcon} alt="jsx" className="file-icon" />
+                    {name}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </aside>
+  );
+};
 
 export default Sidebar;

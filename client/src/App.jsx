@@ -1,12 +1,18 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import VSCodeShell from './components/VSCodeShell';
-import AppRouter from './router/AppRouter';
+import { BrowserRouter as Router } from "react-router-dom";
+import Layout from "./components/Layout";
+import AppRouter from "./router/AppRouter";
+import { SidebarProvider } from "./contexts/SidebarContext";
+import { TabsProvider } from "./contexts/TabsContext";
 
 const App = () => (
   <Router>
-    <VSCodeShell>
-      <AppRouter />
-    </VSCodeShell>
+    <SidebarProvider>
+      <TabsProvider>
+        <Layout>
+          <AppRouter />
+        </Layout>
+      </TabsProvider>
+    </SidebarProvider>
   </Router>
 );
 
