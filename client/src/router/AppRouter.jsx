@@ -5,7 +5,7 @@ import { lazy, Suspense } from 'react';
 const Home = lazy(() => import('../pages/Home'));
 const Projects = lazy(() => import('../pages/Projects'));
 const Contact = lazy(() => import('../pages/Contact'));
-
+const Settings = lazy(() => import('../pages/Settings'));
 const AppRouter = () => {
   const location = useLocation();
 
@@ -16,6 +16,7 @@ const AppRouter = () => {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/settings" element={<Settings />}/>
         </Routes>
       </AnimatePresence>
     </Suspense>

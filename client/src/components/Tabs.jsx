@@ -1,25 +1,36 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useTabs } from "../contexts/TabsContext";
+
+const tabMap = {
+  "/projects": "Projects.jsx",
+  "/contact": "Contact.jsx",
+  "/settings": "Settings.jsx"
+};
 
 const Tabs = () => {
-  const { pathname } = useLocation();
-  const active = pathname.split('/')[1] || 'home';
-
-  const tabs = [
-    { name: 'Home.jsx', path: '/' },
-    { name: 'Projects.jsx', path: '/projects' },
-    { name: 'Contact.jsx', path: '/contact' },
-  ];
+  const { tabs, activeTab, openTab, closeTab } = useTabs();
 
   return (
     <div className="tabs">
-      {tabs.map((tab) => {
-        const isActive = pathname === tab.path || (tab.path === '/' && active === 'home');
-        return (
-          <Link key={tab.path} to={tab.path}>
-            <span className={isActive ? 'active' : ''}>{tab.name}</span>
-          </Link>
-        );
-      })}
+      {tabs
+        .filter((tab) => tab !== '/') // ⬅ Don't show Home as a tab
+        .map((tab) => (
+          <div
+            key={tab}
+            className={`tab ${tab === activeTab ? "active" : ""}`}
+            onClick={() => openTab(tab)}
+          >
+            <span>{tabMap[tab]}</span>
+            <button
+              className="close-tab"
+              onClick={(e) => {
+                e.stopPropagation();
+                closeTab(tab);
+              }}
+            >
+              ×
+            </button>
+          </div>
+        ))}
     </div>
   );
 };

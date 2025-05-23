@@ -1,33 +1,30 @@
 import { motion } from 'framer-motion';
-import { Typewriter } from 'react-simple-typewriter';
+import useTypewriterWithSound from '../hooks/useTypeWriter.js';
 
-const Home = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.4 }}
-  >
-    <h1>$ whoami</h1>
-    <p>Win Moe Oo – Final-year IT student eager to develop impactful solutions.</p>
+const Home = () => {
+  const typedText = useTypewriterWithSound(
+    ['Welcome to my terminal.', 'Explore my projects.', 'Let’s connect!'],
+    50, // typeSpeed in ms
+    1500
+  );
 
-    <h2 className="mt-4">$ echo</h2>
-    <p className="typewriter">
-      <Typewriter
-        words={[
-          'Welcome to my code editor.',
-          'Learn more about me.',
-          'Let’s connect!',
-        ]}
-        loop
-        cursor
-        cursorStyle="_"
-        typeSpeed={50}
-        deleteSpeed={40}
-        delaySpeed={1500}
-      />
-    </p>
-  </motion.div>
-);
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+    >
+      <h1>$ whoami</h1>
+      <p>Win Moe Oo – Final-year IT student eager to develop impactful solutions.</p>
+
+      <h2 className="mt-4">$ echo</h2>
+      <p className="typewriter">
+        {typedText}
+        <span className="blinking-cursor">█</span>
+      </p>
+    </motion.div>
+  );
+};
 
 export default Home;
