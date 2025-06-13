@@ -4,9 +4,14 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'vscode-dark',
+    'vscode-light',
+    'solarized-dark',
+    'solarized-light',
+  ],
   theme: {
     extend: {},
   },
   plugins: [],
-}
-
+};

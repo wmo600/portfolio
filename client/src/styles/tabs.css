@@ -1,16 +1,18 @@
-.tabs {
-  display: flex;
-  background-color: #1e1e1e;
-  border-bottom: 1px solid #333;
-}
+@layer components {
+  .tabs {
+    display: flex;
+    padding: 0.25rem 0;
+    transition: background-color 0.3s ease;
+  }
 
-.tabs span {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  color: #bbb;
-}
+  .tabs span {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: inherit;
+  }
 
-.tabs .active {
-  color: #4fc1ff;
-  border-bottom: 2px solid #4fc1ff;
+  .tabs .active {
+    color: #4fc1ff;
+    border-bottom: 2px solid #4fc1ff;
+  }
 }
