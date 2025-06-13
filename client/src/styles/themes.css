@@ -1,0 +1,11 @@
+/* Dark theme (VS Code default) */
+.vscode-dark {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+/* Light theme (optional) */
+.vscode-light {
+  background-color: #ffffff;
+  color: #333;
+}
