@@ -1,0 +1,19 @@
+.code-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.typewriter {
+  color: #86efac;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: #86efac;
+  animation: blink 1s step-end infinite;
+}

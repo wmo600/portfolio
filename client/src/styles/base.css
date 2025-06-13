@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 16px;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  font-family: monospace;
+  color: #d4d4d4;
+  font-size: 0.95rem;
+}
+
+* {
+  font-size: inherit;
+}

@@ -1,0 +1,80 @@
+.sidebar {
+  width: 200px;
+  background-color: #252526;
+  padding: 1rem;
+  border-right: 1px solid #333;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  z-index: 1;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.settings-button {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #bbb;
+  transition: color 0.2s ease;
+}
+
+.settings-button:hover {
+  color: #4fc1ff;
+}
+
+.sidebar-title {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.folder-label {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #d4d4d4;
+}
+
+.file-list {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.file-item {
+  margin-top: 0.25rem;
+}
+
+.file-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.file-link:hover,
+.file-link.active {
+  color: #4fc1ff;
+}
+
+.file-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  margin-right: 0.25rem;
+  flex-shrink: 0;
+}
