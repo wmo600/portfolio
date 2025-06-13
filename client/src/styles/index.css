@@ -1,3 +1,4 @@
+/* ✅ All imports must go FIRST */
 @import './base.css';
 @import './themes.css';
 @import './layout.css';
@@ -5,4 +6,8 @@
 @import './sidebar.css';
 @import './tabs.css';
 @import './codeWindow.css';
-@import './animations.css';
+
+/* ✅ Tailwind directives come after all @imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

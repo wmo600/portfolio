@@ -1,11 +1,79 @@
-/* Dark theme (VS Code default) */
-.vscode-dark {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-}
+@layer base {
+  /* VSCode Dark */
+  .vscode-dark body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+  }
 
-/* Light theme (optional) */
-.vscode-light {
-  background-color: #ffffff;
-  color: #333;
+  .vscode-dark .sidebar,
+  .vscode-dark .activity-bar,
+  .vscode-dark .tabs {
+    background-color: #252526;
+    color: #d4d4d4;
+    border-color: #333;
+  }
+  .vscode-dark select {
+    background-color: #252526;
+    color: #ffffff;
+    border: 1px solid #333;
+  }
+
+  /* VSCode Light */
+  .vscode-light body {
+    background-color: #ffffff;
+    color: #1e1e1e;
+  }
+
+  .vscode-light .sidebar,
+  .vscode-light .activity-bar,
+  .vscode-light .tabs {
+    background-color: #f3f3f3;
+    color: #1e1e1e;
+    border-color: #ccc;
+  }
+
+  .vscode-light select {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+  }
+
+  /* Solarized Dark */
+  .solarized-dark body {
+    background-color: #002b36;
+    color: #839496;
+  }
+
+  .solarized-dark .sidebar,
+  .solarized-dark .activity-bar,
+  .solarized-dark .tabs {
+    background-color: #073642;
+    color: #93a1a1;
+    border-color: #586e75;
+  }
+
+  .solarized-dark select {
+    background-color: #073642;
+    color: #93a1a1;
+    border: 1px solid #586e75;
+  }
+
+  /* Solarized Light */
+  .solarized-light body {
+    background-color: #fdf6e3;
+    color: #657b83;
+  }
+
+  .solarized-light .sidebar,
+  .solarized-light .activity-bar,
+  .solarized-light .tabs {
+    background-color: #eee8d5;
+    color: #657b83;
+    border-color: #93a1a1;
+  }
+  .solarized-light select {
+    background-color: #eee8d5;
+    color: #657b83;
+    border: 1px solid #93a1a1;
+  }
 }
