@@ -1,0 +1,32 @@
+@layer components {
+  .status-bar {
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.75rem;
+    font-size: 0.72rem;
+    font-family: monospace;
+    flex-shrink: 0;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .status-left,
+  .status-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .status-bar a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+  }
+
+  .status-bar a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}

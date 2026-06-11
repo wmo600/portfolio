@@ -6,6 +6,7 @@
 @import './sidebar.css';
 @import './tabs.css';
 @import './codeWindow.css';
+@import './statusBar.css';
 
 /* ✅ Tailwind directives come after all @imports */
 @tailwind base;

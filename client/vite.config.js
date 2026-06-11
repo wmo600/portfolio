@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port:3000,
-    open: true, // 👈 This opens the default browser
+    open: true, // This opens the default browser
   },
 })

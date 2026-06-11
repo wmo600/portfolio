@@ -76,4 +76,24 @@
     color: #657b83;
     border: 1px solid #93a1a1;
   }
+  /* Status bar theme colours */
+  .vscode-dark .status-bar {
+    background-color: #007acc;
+    color: #fff;
+  }
+
+  .vscode-light .status-bar {
+    background-color: #007acc;
+    color: #fff;
+  }
+
+  .solarized-dark .status-bar {
+    background-color: #268bd2;
+    color: #fdf6e3;
+  }
+
+  .solarized-light .status-bar {
+    background-color: #b58900;
+    color: #fdf6e3;
+  }
 }

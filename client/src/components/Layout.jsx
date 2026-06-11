@@ -3,14 +3,16 @@ import ActivityBar from "./ActivityBar";
 import { useSidebar } from "../contexts/SidebarContext";
 import Sidebar from "./Sidebar";
 import Tabs from "./Tabs";
+import StatusBar from "./StatusBar";
 
 const Layout = ({ children }) => {
   const { isSidebarOpen } = useSidebar();
 
-  return (
-    <div className="layout">
+return (
+  <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', width: '100%' }}>
+    
+    <div className="layout" style={{ flex: 1, overflow: 'hidden' }}>
       <ActivityBar />
-
       <motion.div
         className="sidebar"
         animate={{
@@ -25,19 +27,20 @@ const Layout = ({ children }) => {
       >
         <Sidebar />
       </motion.div>
-
       <motion.div
         className="main-area"
-        animate={{
-          marginLeft: isSidebarOpen ? 0 : -200,
-        }}
+        animate={{ marginLeft: isSidebarOpen ? 0 : -200 }}
         transition={{ duration: 0.3 }}
       >
         <Tabs />
         <div className="code-window">{children}</div>
       </motion.div>
     </div>
-  );
+
+    <StatusBar />  {/* ← outside .layout, after it */}
+
+  </div>
+);
 };
 
 export default Layout;
