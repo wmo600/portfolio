@@ -18,7 +18,7 @@ const Settings = () => {
         <select
           value={theme}
           onChange={(e) => setTheme(e.target.value)}
-          className="bg-[#252526] text-white border border-[#444] rounded px-3 py-2 w-64 focus:outline-none"
+          className="rounded px-3 py-2 w-64 focus:outline-none"
         >
           {availableThemes.map((t) => (
             <option key={t.value} value={t.value}>
