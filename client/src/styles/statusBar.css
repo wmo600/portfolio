@@ -10,6 +10,8 @@
     flex-shrink: 0;
     user-select: none;
     white-space: nowrap;
+    background-color: var(--color-status-bg);
+    color: var(--color-status-text);
   }
 
   .status-left,
@@ -20,7 +22,7 @@
   }
 
   .status-bar a {
-    color: #fff;
+    color: inherit;
     text-decoration: none;
     opacity: 0.85;
   }

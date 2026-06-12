@@ -8,8 +8,11 @@
     flex-direction: column;
     min-width: 200px;
     z-index: 1;
-    transition: width 0.3s ease;
     overflow: hidden;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border-right: 1px solid var(--color-border);
+    transition: width 0.3s ease;
   }
 
   .sidebar-footer {
@@ -29,12 +32,12 @@
   }
 
   .settings-button:hover {
-    color: #4fc1ff;
+    color: var(--color-accent);
   }
 
   .sidebar-title {
     font-size: 0.75rem;
-    color: #9ca3af;
+    color: var(--color-muted);
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -67,7 +70,7 @@
 
   .file-link:hover,
   .file-link.active {
-    color: #4fc1ff;
+    color: var(--color-accent);
   }
 
   .file-icon {

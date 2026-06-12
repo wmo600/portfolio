@@ -2,6 +2,9 @@
   .tabs {
     display: flex;
     padding: 0.25rem 0;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
     transition: background-color 0.3s ease;
   }
 
@@ -12,7 +15,7 @@
   }
 
   .tabs .active {
-    color: #4fc1ff;
-    border-bottom: 2px solid #4fc1ff;
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
   }
 }

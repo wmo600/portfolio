@@ -6,7 +6,7 @@
   }
 
   .typewriter {
-    color: #86efac;
+    color: var(--color-typewriter);
     font-family: monospace;
     white-space: nowrap;
     overflow: hidden;
@@ -15,16 +15,7 @@
   .blinking-cursor {
     display: inline-block;
     margin-left: 2px;
-    color: #86efac;
+    color: var(--color-typewriter);
     animation: blink 1s step-end infinite;
-  }
-
-  @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
   }
 }

@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   const files = [
     { name: "Projects.jsx", path: "/projects" },
-    { name: "Contact.jsx", path: "/contact" },
+    { name: "Certs.jsx", path: "/certs" },
   ];
 
   return (

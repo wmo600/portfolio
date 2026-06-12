@@ -1,99 +1,82 @@
 @layer base {
-  /* VSCode Dark */
-  .vscode-dark body {
-    background-color: #1e1e1e;
-    color: #d4d4d4;
+
+  /* ─── VS Code Dark ─────────────────────────────────────────────────────── */
+
+  .vscode-dark {
+    --color-bg:           #1e1e1e;
+    --color-surface:      #252526;
+    --color-border:       #333333;
+    --color-text:         #d4d4d4;
+    --color-muted:        #9ca3af;
+    --color-accent:       #4fc1ff;
+    --color-terminal:     #4ec9b0;
+    --color-typewriter:   #86efac;
+    --color-comment:      #6a9955;
+    --color-keyword:      #569cd6;
+    --color-string:       #ce9178;
+    --color-number:       #b5cea8;
+    --color-variable:     #9cdcfe;
+    --color-status-bg:    #007acc;
+    --color-status-text:  #ffffff;
   }
 
-  .vscode-dark .sidebar,
-  .vscode-dark .activity-bar,
-  .vscode-dark .tabs {
-    background-color: #252526;
-    color: #d4d4d4;
-    border-color: #333;
-  }
-  .vscode-dark select {
-    background-color: #252526;
-    color: #ffffff;
-    border: 1px solid #333;
+  /* ─── VS Code Light ────────────────────────────────────────────────────── */
+
+  .vscode-light {
+    --color-bg:           #ffffff;
+    --color-surface:      #f3f3f3;
+    --color-border:       #cccccc;
+    --color-text:         #1e1e1e;
+    --color-muted:        #6e6e6e;
+    --color-accent:       #0066bf;
+    --color-terminal:     #008080;
+    --color-typewriter:   #15803d;
+    --color-comment:      #008000;
+    --color-keyword:      #0000ff;
+    --color-string:       #a31515;
+    --color-number:       #098658;
+    --color-variable:     #001080;
+    --color-status-bg:    #007acc;
+    --color-status-text:  #ffffff;
   }
 
-  /* VSCode Light */
-  .vscode-light body {
-    background-color: #ffffff;
-    color: #1e1e1e;
+  /* ─── Solarized Dark ───────────────────────────────────────────────────── */
+
+  .solarized-dark {
+    --color-bg:           #002b36;
+    --color-surface:      #073642;
+    --color-border:       #094555;
+    --color-text:         #839496;
+    --color-muted:        #657b83;
+    --color-accent:       #268bd2;
+    --color-terminal:     #2aa198;
+    --color-typewriter:   #859900;
+    --color-comment:      #586e75;
+    --color-keyword:      #268bd2;
+    --color-string:       #cb4b16;
+    --color-number:       #859900;
+    --color-variable:     #93a1a1;
+    --color-status-bg:    #268bd2;
+    --color-status-text:  #fdf6e3;
   }
 
-  .vscode-light .sidebar,
-  .vscode-light .activity-bar,
-  .vscode-light .tabs {
-    background-color: #f3f3f3;
-    color: #1e1e1e;
-    border-color: #ccc;
-  }
+  /* ─── Solarized Light ──────────────────────────────────────────────────── */
 
-  .vscode-light select {
-    background-color: #ffffff;
-    color: #000;
-    border: 1px solid #ccc;
-  }
-
-  /* Solarized Dark */
-  .solarized-dark body {
-    background-color: #002b36;
-    color: #839496;
-  }
-
-  .solarized-dark .sidebar,
-  .solarized-dark .activity-bar,
-  .solarized-dark .tabs {
-    background-color: #073642;
-    color: #93a1a1;
-    border-color: #586e75;
-  }
-
-  .solarized-dark select {
-    background-color: #073642;
-    color: #93a1a1;
-    border: 1px solid #586e75;
-  }
-
-  /* Solarized Light */
-  .solarized-light body {
-    background-color: #fdf6e3;
-    color: #657b83;
-  }
-
-  .solarized-light .sidebar,
-  .solarized-light .activity-bar,
-  .solarized-light .tabs {
-    background-color: #eee8d5;
-    color: #657b83;
-    border-color: #93a1a1;
-  }
-  .solarized-light select {
-    background-color: #eee8d5;
-    color: #657b83;
-    border: 1px solid #93a1a1;
-  }
-  /* Status bar theme colours */
-  .vscode-dark .status-bar {
-    background-color: #007acc;
-    color: #fff;
-  }
-
-  .vscode-light .status-bar {
-    background-color: #007acc;
-    color: #fff;
-  }
-
-  .solarized-dark .status-bar {
-    background-color: #268bd2;
-    color: #fdf6e3;
-  }
-
-  .solarized-light .status-bar {
-    background-color: #b58900;
-    color: #fdf6e3;
+  .solarized-light {
+    --color-bg:           #fdf6e3;
+    --color-surface:      #eee8d5;
+    --color-border:       #cdc8b1;
+    --color-text:         #657b83;
+    --color-muted:        #839496;
+    --color-accent:       #268bd2;
+    --color-terminal:     #2aa198;
+    --color-typewriter:   #859900;
+    --color-comment:      #93a1a1;
+    --color-keyword:      #268bd2;
+    --color-string:       #cb4b16;
+    --color-number:       #859900;
+    --color-variable:     #268bd2;
+    --color-status-bg:    #b58900;
+    --color-status-text:  #fdf6e3;
   }
 }

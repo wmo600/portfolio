@@ -1,0 +1,165 @@
+@layer components {
+
+  /* ─── Page ───────────────────────────────────────────────────────────────── */
+
+  .certs-page {
+    padding: 1.5rem;
+    max-width: 780px;
+  }
+
+  /* ─── Header ─────────────────────────────────────────────────────────────── */
+
+  .certs-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .certs-header h1 {
+    color: var(--color-terminal);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .certs-header p {
+    color: var(--color-comment);
+    font-size: 0.82rem;
+  }
+
+  /* ─── Section ────────────────────────────────────────────────────────────── */
+
+  .certs-section {
+    margin-bottom: 2rem;
+  }
+
+  .certs-section-header {
+    color: var(--color-keyword);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* ─── Base card ──────────────────────────────────────────────────────────── */
+
+  .cert-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--cert-color);
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+  }
+
+  /* ─── Credly card ────────────────────────────────────────────────────────── */
+
+  .credly-card {
+    padding: 1rem 1.25rem;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .credly-badge {
+    flex-shrink: 0;
+  }
+
+  .cert-info {
+    flex: 1;
+  }
+
+  .cert-name {
+    color: var(--cert-color);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .cert-issuer {
+    color: var(--color-muted);
+    font-size: 0.78rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .cert-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cert-meta-row {
+    color: var(--color-comment);
+    font-size: 0.75rem;
+    font-family: monospace;
+  }
+
+  .cert-meta-row .value-green  { color: var(--color-number);   }
+  .cert-meta-row .value-orange { color: var(--color-string);   }
+  .cert-meta-row .value-blue   { color: var(--color-variable); }
+
+  .cert-links {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .cert-link {
+    color: var(--cert-color);
+    border: 1px solid var(--cert-color);
+    font-size: 0.75rem;
+    font-family: monospace;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 0.15rem 0.5rem;
+    opacity: 0.85;
+    transition: opacity 0.15s;
+  }
+
+  .cert-link:hover {
+    opacity: 1;
+  }
+
+  .cert-link--validate {
+    color: var(--color-variable);
+    border-color: var(--color-variable);
+  }
+
+  /* ─── Co-curricular card ─────────────────────────────────────────────────── */
+
+  .cocu-card {
+    padding: 0.85rem 1rem;
+  }
+
+  .cocu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.2rem;
+  }
+
+  .cocu-name {
+    color: var(--cert-color);
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+
+  .cocu-date {
+    color: var(--color-comment);
+    font-size: 0.72rem;
+    font-family: monospace;
+  }
+
+  .cocu-issuer {
+    color: var(--color-muted);
+    font-size: 0.76rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .cocu-description {
+    color: var(--color-text);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+  }
+}
