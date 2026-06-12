@@ -1,6 +1,24 @@
 @layer base {
+
+  /* ─── Default variables (vscode-dark fallback) ─────────────────────────── */
+
   :root {
     font-size: 16px;
+    --color-bg:           #1e1e1e;
+    --color-surface:      #252526;
+    --color-border:       #333333;
+    --color-text:         #d4d4d4;
+    --color-muted:        #9ca3af;
+    --color-accent:       #4fc1ff;
+    --color-terminal:     #4ec9b0;
+    --color-typewriter:   #86efac;
+    --color-comment:      #6a9955;
+    --color-keyword:      #569cd6;
+    --color-string:       #ce9178;
+    --color-number:       #b5cea8;
+    --color-variable:     #9cdcfe;
+    --color-status-bg:    #007acc;
+    --color-status-text:  #ffffff;
   }
 
   html, body, #root {
@@ -9,10 +27,18 @@
     padding: 0;
     font-family: monospace;
     font-size: 0.95rem;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   * {
     font-size: inherit;
+  }
+
+  select {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
   }
 }

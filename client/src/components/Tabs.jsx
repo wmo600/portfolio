@@ -2,7 +2,7 @@ import { useTabs } from "../contexts/TabsContext";
 
 const tabMap = {
   "/projects": "Projects.jsx",
-  "/contact": "Contact.jsx",
+  "/certs": "Certs.jsx",
   "/settings": "Settings.jsx"
 };
 
