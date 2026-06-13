@@ -14,7 +14,7 @@ const StatusBar = () => {
       {/* Right side — contact links */}
       <div className="status-right">
         <span>{theme}</span>
-        <a href="mailto:Jack.Win.tech@proton.me">📧 Email</a>
+        <a href="mailto:winmoeoo.personal@gmail.com">📧 Email</a>
         <a href="https://www.linkedin.com/in/winmoeoo" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
