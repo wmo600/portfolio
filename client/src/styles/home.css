@@ -1,0 +1,119 @@
+@layer components {
+
+  /* ─── Layout ─────────────────────────────────────────────────────────────── */
+
+  .home {
+    max-width: 640px;
+  }
+
+  .home-section {
+    margin-bottom: 2rem;
+  }
+
+  /* ─── Prompt lines ($ command) ───────────────────────────────────────────── */
+
+  .home-prompt {
+    color: var(--color-terminal);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ─── Identity ───────────────────────────────────────────────────────────── */
+
+  .home-name {
+    color: var(--color-variable);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .home-role {
+    color: var(--color-comment);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .home-role-text {
+    color: var(--color-keyword);
+    font-weight: 600;
+  }
+
+  .home-bio {
+    color: var(--color-text);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 560px;
+  }
+
+  /* ─── Tech stack tags ────────────────────────────────────────────────────── */
+
+  .home-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .home-tag {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 0.15rem 0.55rem;
+    font-size: 0.78rem;
+    font-family: monospace;
+    color: var(--color-variable);
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .home-tag:hover {
+    border-color: var(--color-keyword);
+    color: var(--color-keyword);
+  }
+
+  /* ─── Call-to-action buttons ─────────────────────────────────────────────── */
+
+  .home-cta {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 0.45rem 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, transform 0.1s;
+  }
+
+  .home-cta:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+  }
+
+  /* Primary CTA — projects (stands out) */
+
+  .home-cta--primary {
+    display: block;
+    width: fit-content;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-terminal);
+    border-color: var(--color-terminal);
+    margin-bottom: 1rem;
+  }
+
+  .home-cta--primary:hover {
+    color: var(--color-bg);
+    background: var(--color-terminal);
+    border-color: var(--color-terminal);
+  }
+
+  /* Secondary CTA row */
+
+  .home-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
