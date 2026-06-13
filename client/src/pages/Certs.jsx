@@ -28,7 +28,7 @@ const cocurricular = [
     description:
       "Volunteer — Football training, donation & lunch arrangements for Hnget Aww San Social Welfare Training School, Kawhmu Township, Yangon",
     date: "September 2016",
-    pdfPath: "/certs/CoCurricular.pdf",
+    pdfPath: "/certs/HngetAwwSan.pdf",
     color: "#4ec9b0",
   },
   {
@@ -38,7 +38,7 @@ const cocurricular = [
     description:
       "Volunteer — Hepatitis B vaccine inoculation drive, Hlegu Township",
     date: "Jul – Sep 2018",
-    pdfPath: "/certs/CoCurricular.pdf",
+    pdfPath: "/certs/HepatitisB.pdf",
     color: "#4ec9b0",
   },
   {
@@ -47,7 +47,7 @@ const cocurricular = [
     issuer: "Yangon International Hotel Aikido Dojo (M.A.A)",
     description: "Successfully completed the TTC Aikido Summer Camp",
     date: "Mar 15 – Apr 4, 2019",
-    pdfPath: "/certs/CoCurricular.pdf",
+    pdfPath: "/certs/Aikido.pdf",
     color: "#569cd6",
   },
   {
@@ -56,8 +56,17 @@ const cocurricular = [
     issuer: "National Education Department, Myanmar",
     description: "Academic commendation — school-level award",
     date: "2018 – 2019",
-    pdfPath: "/certs/CoCurricular.pdf",
+    pdfPath: "/certs/PyithuNiTi.pdf",
     color: "#dcdcaa",
+  },
+  {
+    id: "sp-rpa-hackathon",
+    name: "Certificate of Achievement",
+    issuer: "SimplifyNext & UiPath Community",
+    description: "Finalist — SP RPA Hackathon 2024",
+    date: "11 April 2024",
+    pdfPath: "/certs/SimplifyNext.pdf",
+    color: "#c586c0",
   },
 ];
 
