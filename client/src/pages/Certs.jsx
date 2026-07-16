@@ -18,6 +18,20 @@ const professional = [
     pdfPath: "/certs/AWS_CCP.pdf",
     color: "#FF9900",
   },
+  {
+    id: "python-pcep",
+    name: "Certified Entry-Level Python Programmer (PCEP)",
+    issuer: "OpenEDG Python Institute",
+    issued: "July 16, 2026",
+    expires: null, // PCEP is lifetime-valid
+    validation: "AZBM.wmXM.z5uR",
+    validateUrl: "https://verify.openedg.org/?id=AZBM.wmXM.z5uR",
+    credlyId: "22980ce8-ac34-4aca-91d8-41f01d10c94a",
+    credlyUrl:
+      "https://www.credly.com/badges/22980ce8-ac34-4aca-91d8-41f01d10c94a/public_url",
+    pdfPath: "/certs/PCEP.pdf",
+    color: "#3776AB",
+  },
 ];
 
 const cocurricular = [
@@ -114,14 +128,18 @@ const CredlyCard = ({ cert }) => (
           {"// issued: "}
           <span className="value-green">{cert.issued}</span>
         </span>
+
         <span className="cert-meta-row">
           {"// expires: "}
-          <span className="value-orange">{cert.expires}</span>
+          <span className="value-orange">{cert.expires ?? "no expiry"}</span>
         </span>
-        <span className="cert-meta-row">
-          {"// validation: "}
-          <span className="value-blue">{cert.validation}</span>
-        </span>
+
+        {cert.validation && (
+          <span className="cert-meta-row">
+            {"// validation: "}
+            <span className="value-blue">{cert.validation}</span>
+          </span>
+        )}
       </div>
 
       <div className="cert-links">
@@ -141,14 +159,16 @@ const CredlyCard = ({ cert }) => (
         >
           View Certificate ↗
         </a>
-        <a
-          href={cert.validateUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cert-link cert-link--validate"
-        >
-          Validate ↗
-        </a>
+        {cert.validateUrl && (
+          <a
+            href={cert.validateUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cert-link cert-link--validate"
+          >
+            Validate ↗
+          </a>
+        )}
       </div>
     </div>
   </motion.div>
